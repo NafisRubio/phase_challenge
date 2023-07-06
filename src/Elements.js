@@ -10,6 +10,7 @@ const Elements = () => {
 
   const elements = useSelector((state) => state.elements.value)
 
+  // @TODO: Handle nested elements
   const getElementsRecursive = (elements, parentPageId) => {
     const filterElements = elements.filter(element => element.parentPageId === parentPageId)
     const arr = filterElements.map(element => {
