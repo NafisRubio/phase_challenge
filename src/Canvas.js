@@ -32,6 +32,7 @@ const Canvas = () => {
   const [draggedElement, setDraggedElement] = useState(null);
 
   const handleDragStart = (event, page) => {
+    dispatch(selectPage(page))
     setDragging(true);
     setInitialPosition({ x: event.clientX, y: event.clientY });
     setDraggedElement(page);
